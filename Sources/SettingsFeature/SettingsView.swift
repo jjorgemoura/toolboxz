@@ -1,4 +1,8 @@
-import UIKit
+import SwiftUI
 
-public class SettingsView: UIViewController {
+public struct SettingsView: View {
+
+    public var body: some View {
+        Text("Settings")
+    }
 }

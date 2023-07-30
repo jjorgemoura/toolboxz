@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mouraj01/Developer/myProjs/toolboxz/Apps/Toolboxz.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

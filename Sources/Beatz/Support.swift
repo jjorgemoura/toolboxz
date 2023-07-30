@@ -1,6 +1,23 @@
 import Combine
+import Dependencies
 import Foundation
 import Network
+import XCTestDynamicOverlay
+
+extension DependencyValues {
+    public var beatz: Beatz {
+        get { self[Beatz.self] }
+        set { self[Beatz.self] = newValue}
+    }
+}
+
+extension Beatz: TestDependencyKey {
+    static public var previewValue = Self.satisfied
+
+    static public var testValue = Self(
+        networkPathPublisher: unimplemented("\(Self.self).networkPathPublisher")
+    )
+}
 
 extension Beatz {
     public static let satisfied = Self(

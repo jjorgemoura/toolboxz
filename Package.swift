@@ -43,12 +43,17 @@ let package = Package(
     ],
 
     dependencies: [
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "0.6.0"),
+        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.9.0")
     ],
 
     targets: [
         .target(
             name: "Alfaz",
-            dependencies: []
+            dependencies: [
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+            ]
         ),
         .testTarget(
             name: "AlfazTests",

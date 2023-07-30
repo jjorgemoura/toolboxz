@@ -1,6 +1,7 @@
-public extension Alfaz {
+import Dependencies
 
-    static var live = Self(
+extension Alfaz: DependencyKey {
+    public static var liveValue = Self(
         fetch: { return "data" }
     )
 }
