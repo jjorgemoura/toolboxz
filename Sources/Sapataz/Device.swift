@@ -1,13 +1,3 @@
-//
-//  Device.swift
-//  sapataz
-//
-//  Created by Jorge Moura on 15/05/2017.
-//
-//
-
-import Foundation
-
 ///Device is a struct that groups all the data about the device. It is a convenience struct.
 public struct Device {
 

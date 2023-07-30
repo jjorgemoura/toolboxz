@@ -1,12 +1,4 @@
-//
-//  Array+.swift
-//  sapataz-iOS
-//
-//  Created by Jorge Moura on 29/03/2019.
-//
-
 extension Array {
-
     var isNotEmpty: Bool {
         return !self.isEmpty
     }

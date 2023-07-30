@@ -11,32 +11,32 @@ public extension Gavetaz {
             boolWithKey: userDefaults.bool(forKey:),
             dataWithKey: userDefaults.data(forKey:),
             doubleWithKey: userDefaults.double(forKey:),
-            integerWithKey: userDefaults.integer(forKey:),
-            remove: { key in
-                .fireAndForget {
-                    userDefaults.removeObject(forKey: key)
-                }
-            },
-            persistBool: { value, key in
-                .fireAndForget {
-                    userDefaults.set(value, forKey: key)
-                }
-            },
-            persistData: { data, key in
-                .fireAndForget {
-                    userDefaults.set(data, forKey: key)
-                }
-            },
-            persistDouble: { value, key in
-                .fireAndForget {
-                    userDefaults.set(value, forKey: key)
-                }
-            },
-            persistInteger: { value, key in
-                .fireAndForget {
-                    userDefaults.set(value, forKey: key)
-                }
-            }
+            integerWithKey: userDefaults.integer(forKey:)
+//            remove: { key in
+//                .fireAndForget {
+//                    userDefaults.removeObject(forKey: key)
+//                }
+//            },
+//            persistBool: { value, key in
+//                .fireAndForget {
+//                    userDefaults.set(value, forKey: key)
+//                }
+//            },
+//            persistData: { data, key in
+//                .fireAndForget {
+//                    userDefaults.set(data, forKey: key)
+//                }
+//            },
+//            persistDouble: { value, key in
+//                .fireAndForget {
+//                    userDefaults.set(value, forKey: key)
+//                }
+//            },
+//            persistInteger: { value, key in
+//                .fireAndForget {
+//                    userDefaults.set(value, forKey: key)
+//                }
+//            }
         )
     }
 }

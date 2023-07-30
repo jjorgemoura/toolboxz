@@ -1,4 +1,4 @@
-import ComposableArchitecture
+//import ComposableArchitecture
 import Foundation
 
 /// This API allow us to read and write data to/from `UserDefaults`.
@@ -22,9 +22,9 @@ public struct Gavetaz {
     public var dataWithKey: (String) -> Data?
     public var doubleWithKey: (String) -> Double
     public var integerWithKey: (String) -> Int
-    public var remove: (String) -> Effect<Never, Never>
-    public var persistBool: (Bool, String) -> Effect<Never, Never>
-    public var persistData: (Data?, String) -> Effect<Never, Never>
-    public var persistDouble: (Double, String) -> Effect<Never, Never>
-    public var persistInteger: (Int, String) -> Effect<Never, Never>
+//    public var remove: (String) -> Effect<Never, Never>
+//    public var persistBool: (Bool, String) -> Effect<Never, Never>
+//    public var persistData: (Data?, String) -> Effect<Never, Never>
+//    public var persistDouble: (Double, String) -> Effect<Never, Never>
+//    public var persistInteger: (Int, String) -> Effect<Never, Never>
 }
