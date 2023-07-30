@@ -1,6 +1,5 @@
-public extension Variationz {
-
-    static var live = Self(
+extension Variationz {
+    public static var live = Self(
         style: { element in element }
     )
 }

@@ -4,14 +4,14 @@ import XCTestDynamicOverlay
 extension DependencyValues {
     public var alfaz: Alfaz {
         get { self[Alfaz.self] }
-        set { self[Alfaz.self] = newValue}
+        set { self[Alfaz.self] = newValue }
     }
 }
 
 extension Alfaz: TestDependencyKey {
-    static public var previewValue = Self.someData
+    public static var previewValue = Self.someData
 
-    static public var testValue = Self(
+    public static var testValue = Self(
         fetch: unimplemented("\(Self.self).fetch")
     )
 }

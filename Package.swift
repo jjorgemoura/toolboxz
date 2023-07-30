@@ -8,7 +8,7 @@ let package = Package(
         .iOS(.v16),
         .macOS(.v12),
         .tvOS(.v16),
-        .watchOS(.v8),
+        .watchOS(.v8)
     ],
 
     products: [
@@ -52,7 +52,7 @@ let package = Package(
             name: "Alfaz",
             dependencies: [
                 .product(name: "Dependencies", package: "swift-dependencies"),
-                .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+                .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay")
             ]
         ),
         .testTarget(
@@ -63,9 +63,9 @@ let package = Package(
         ),
 
         .target(
-                name: "Beatz",
-                dependencies: []
-            ),
+            name: "Beatz",
+            dependencies: []
+        ),
         .testTarget(
             name: "BeatzTests",
             dependencies: [
@@ -74,9 +74,9 @@ let package = Package(
         ),
 
         .target(
-                name: "Defectz",
-                dependencies: []
-            ),
+            name: "Defectz",
+            dependencies: []
+        ),
         .testTarget(
             name: "DefectzTests",
             dependencies: [
@@ -85,9 +85,9 @@ let package = Package(
         ),
 
         .target(
-                name: "Gavetaz",
-                dependencies: []
-            ),
+            name: "Gavetaz",
+            dependencies: []
+        ),
         .testTarget(
             name: "GavetazTests",
             dependencies: [
@@ -96,9 +96,9 @@ let package = Package(
         ),
 
         .target(
-                name: "Sapataz",
-                dependencies: []
-            ),
+            name: "Sapataz",
+            dependencies: []
+        ),
         .testTarget(
             name: "SapatazTests",
             dependencies: [
@@ -107,9 +107,9 @@ let package = Package(
         ),
 
         .target(
-                name: "SettingsFeature",
-                dependencies: []
-            ),
+            name: "SettingsFeature",
+            dependencies: []
+        ),
         .testTarget(
             name: "SettingsFeatureTests",
             dependencies: [
@@ -118,14 +118,14 @@ let package = Package(
         ),
 
         .target(
-                name: "Variationz",
-                dependencies: []
-            ),
+            name: "Variationz",
+            dependencies: []
+        ),
         .testTarget(
             name: "VariationzTests",
             dependencies: [
                 "Variationz"
             ]
-        ),
+        )
     ]
 )

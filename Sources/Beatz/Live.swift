@@ -10,17 +10,17 @@ extension Beatz {
 
         return Self(
             networkPathPublisher:
-                subject.handleEvents(
-                    receiveSubscription: { _ in monitor.start(queue: queue) },
-                    receiveCancel: monitor.cancel
-                )
-                .map(NetworkPath.init(rawValue:))
-                .eraseToAnyPublisher()
+            subject.handleEvents(
+                receiveSubscription: { _ in monitor.start(queue: queue) },
+                receiveCancel: monitor.cancel
+            )
+            .map(NetworkPath.init(rawValue:))
+            .eraseToAnyPublisher()
         )
     }
 }
 
-//final class AppDelegate: NSObject, UIApplicationDelegate {
+// final class AppDelegate: NSObject, UIApplicationDelegate {
 //    let store = Store(
 //        initialState: AppReducer.State(),
 //        reducer: AppReducer().transformDependency(\.self) {

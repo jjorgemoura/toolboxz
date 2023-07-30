@@ -2,7 +2,6 @@
 import XCTest
 
 class IdentifierTests: XCTestCase {
-
 //    func testNotNullIdentifier() {
 //        let identifier = Identifier().generate()
 //

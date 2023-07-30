@@ -1,6 +1,4 @@
 @testable import Gavetaz
-
-import ComposableArchitecture
 import XCTest
 
 final class LiveTests: XCTestCase {

@@ -1,11 +1,10 @@
-public extension Defectz {
-
-    static var console = Self(
+extension Defectz {
+    public static var console = Self(
         logError: { error in print("Event error -> \(error)") },
         logEvent: { event in print("Event -> \(event)") }
     )
 
-    static var noop = Self(
+    public static var noop = Self(
         logError: { _ in },
         logEvent: { _ in }
     )

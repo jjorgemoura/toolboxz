@@ -7,14 +7,14 @@ import XCTestDynamicOverlay
 extension DependencyValues {
     public var beatz: Beatz {
         get { self[Beatz.self] }
-        set { self[Beatz.self] = newValue}
+        set { self[Beatz.self] = newValue }
     }
 }
 
 extension Beatz: TestDependencyKey {
-    static public var previewValue = Self.satisfied
+    public static var previewValue = Self.satisfied
 
-    static public var testValue = Self(
+    public static var testValue = Self(
         networkPathPublisher: unimplemented("\(Self.self).networkPathPublisher")
     )
 }
@@ -24,12 +24,12 @@ extension Beatz {
         networkPathPublisher: Just(NetworkPath(status: .satisfied))
             .eraseToAnyPublisher()
     )
-    
+
     public static let unsatisfied = Self(
         networkPathPublisher: Just(NetworkPath(status: .unsatisfied))
             .eraseToAnyPublisher()
     )
-    
+
     public static let flakey = Self(
         networkPathPublisher: Timer.publish(every: 2, on: .main, in: .default)
             .autoconnect()

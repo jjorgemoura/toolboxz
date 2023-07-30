@@ -4,7 +4,7 @@ import Network
 public struct Beatz {
     public var networkPathPublisher: AnyPublisher<NetworkPath, Never>
 
-    public init( networkPathPublisher: AnyPublisher<NetworkPath, Never>) {
+    public init(networkPathPublisher: AnyPublisher<NetworkPath, Never>) {
         self.networkPathPublisher = networkPathPublisher
     }
 }

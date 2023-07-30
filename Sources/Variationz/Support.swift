@@ -1,6 +1,5 @@
-public extension Variationz {
-
-    static var noop = Self(
+extension Variationz {
+    public static var noop = Self(
         style: { element in element }
     )
 }

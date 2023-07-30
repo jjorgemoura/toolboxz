@@ -1,12 +1,12 @@
 import Foundation
 
-public extension Gavetaz {
+extension Gavetaz {
     /// The `live` implementation of the Gavetaz API.
     ///
     /// - Parameter userDefaults: A `UserDefaults` instance used to store the data.
     ///
     /// - Returns: Returns an instance of `Gavetaz`.
-    static func live(userDefaults: UserDefaults) -> Self {
+    public static func live(userDefaults: UserDefaults) -> Self {
         Self(
             boolWithKey: userDefaults.bool(forKey:),
             dataWithKey: userDefaults.data(forKey:),
