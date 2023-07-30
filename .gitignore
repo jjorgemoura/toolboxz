@@ -88,3 +88,14 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+.DS_Store
+
+App/fastlane/report.xml
+App/fastlane/Preview.html
+App/fastlane/screenshots/**/*.png
+App/fastlane/test_output
+App/.swiftpm
+Assets/.swiftpm
+
+.DS_Store
