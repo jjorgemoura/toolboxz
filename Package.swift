@@ -43,7 +43,9 @@ let package = Package(
     ],
 
     dependencies: [
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "prerelease/1.0"),
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "0.6.0"),
+        .package(url: "https://github.com/pointfreeco/swift-tagged", from: "0.6.0"),
         .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.9.0")
     ],
 
@@ -108,7 +110,10 @@ let package = Package(
 
         .target(
             name: "SettingsFeature",
-            dependencies: []
+            dependencies: [
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+                .product(name: "Tagged", package: "swift-tagged")
+            ]
         ),
         .testTarget(
             name: "SettingsFeatureTests",

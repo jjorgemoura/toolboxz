@@ -1,8 +1,9 @@
-@testable import Variationz
+@testable import SettingsFeature
 import XCTest
 
-final class LiveTests: XCTestCase {
-    func testXPTO() {
+final class SettingsFeatureTests: XCTestCase {
+
+    func testActioIsTrigger() {
         let sut = true
 
         XCTAssertTrue(sut)
