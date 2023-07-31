@@ -2,7 +2,7 @@ import ComposableArchitecture
 import Foundation
 import Tagged
 
-public struct SettingItem: ReducerProtocol {
+public struct SettingItem: Reducer {
     public struct State: Equatable, Identifiable {
         var identifier: Tagged<SettingItem, String>
         let title: String

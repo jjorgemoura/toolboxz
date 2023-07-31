@@ -2,7 +2,7 @@ import ComposableArchitecture
 import Foundation
 import Tagged
 
-public struct SettingsSection: ReducerProtocol {
+public struct SettingsSection: Reducer {
     public struct State: Equatable, Identifiable {
         let identifier: Tagged<SettingsSection, String>
         let header: String
@@ -18,7 +18,7 @@ public struct SettingsSection: ReducerProtocol {
         case item(Tagged<SettingItem, String>, SettingItem.Action)
     }
 
-    public var body: some ReducerProtocol<State, Action> {
+    public var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .item(_, _):

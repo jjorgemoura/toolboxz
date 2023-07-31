@@ -43,10 +43,10 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", branch: "prerelease/1.0"),
-        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "0.6.0"),
-        .package(url: "https://github.com/pointfreeco/swift-tagged", from: "0.6.0"),
-        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.9.0")
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.0.0"),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
+        .package(url: "https://github.com/pointfreeco/swift-tagged", from: "0.10.0"),
+        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.0.0")
     ],
 
     targets: [

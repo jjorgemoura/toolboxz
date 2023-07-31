@@ -2,7 +2,7 @@ import ComposableArchitecture
 import Foundation
 import Tagged
 
-public struct Settings: ReducerProtocol {
+public struct Settings: Reducer {
     public struct State: Equatable {
         var sections: IdentifiedArrayOf<SettingsSection.State>
     }
@@ -12,7 +12,7 @@ public struct Settings: ReducerProtocol {
         case section(Tagged<SettingsSection, String>, SettingsSection.Action)
     }
 
-    public var body: some ReducerProtocol<State, Action> {
+    public var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .didAppear:
