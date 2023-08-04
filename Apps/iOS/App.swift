@@ -1,10 +1,10 @@
 import SwiftUI
 
 @main
-struct DemoApp: App {
+struct toolboxzApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Text("Demo App")
         }
     }
 }
