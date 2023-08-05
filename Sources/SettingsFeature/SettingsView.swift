@@ -9,21 +9,34 @@ public struct SettingsView: View {
     }
 
     public var body: some View {
-        Text("Title")
+        WithViewStore(store, observe: { $0 }) { viewStore in
 
-//        ForEachStore(store) { store in
-//            Text("")
-//        }
+            List {
+//                ForEach(viewStore.state.sections) { section in
+//                    NavigationLink(state: section) {
+//                        SettingsSectionView(store: store.scope(
+//                            state: \.sections,
+//                            action: Settings.Action.section)
+//                        )
+//                    }
+//                }
+            }
+        }
     }
 }
 
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-//        SettingsView(store: Store(initialState: Settings.State.standard,
-//                                  reducer: Settings()))
-
-        Text("TEMP")
+        NavigationStack {
+            List {
+                SettingsView(
+                    store: Store(initialState: Settings.State.sampleSettings) {
+                        Settings()
+                    }
+                )
+            }
+        }
     }
 }
 #endif

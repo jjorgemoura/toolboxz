@@ -10,6 +10,7 @@
 		597FFC082A7D9F7D0046A13D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FFC072A7D9F7D0046A13D /* App.swift */; };
 		597FFC0C2A7D9F800046A13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597FFC0B2A7D9F800046A13D /* Assets.xcassets */; };
 		597FFC0F2A7D9F800046A13D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597FFC0E2A7D9F800046A13D /* Preview Assets.xcassets */; };
+		59969DD42A7E5AAC00B4CA58 /* SettingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 59969DD32A7E5AAC00B4CA58 /* SettingsFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59969DD42A7E5AAC00B4CA58 /* SettingsFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +59,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		59969DD22A7E5AAC00B4CA58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF54ADBD2764EC3300D57473 = {
 			isa = PBXGroup;
 			children = (
 				59620CFF2A76C9DC002EB1A6 /* toolboxz */,
 				597FFC062A7D9F7D0046A13D /* iOS */,
 				CF54ADC72764EC3300D57473 /* Products */,
+				59969DD22A7E5AAC00B4CA58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +100,9 @@
 			dependencies = (
 			);
 			name = toolboxz;
+			packageProductDependencies = (
+				59969DD32A7E5AAC00B4CA58 /* SettingsFeature */,
+			);
 			productName = toolboxz;
 			productReference = 597FFC052A7D9F7D0046A13D /* toolboxz.app */;
 			productType = "com.apple.product-type.application";
@@ -360,6 +373,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59969DD32A7E5AAC00B4CA58 /* SettingsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF54ADBE2764EC3300D57473 /* Project object */;
 }
