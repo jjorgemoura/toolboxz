@@ -11,7 +11,12 @@ public struct SettingsSectionView: View {
 
     public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            Section(content: { Text("sdfasd") },
+            Section(content: {
+                ForEachStore(self.store.scope(state: \.items,
+                                              action: SettingsSection.Action.item)) { itemStore in
+                    SettingsItemView(store: itemStore)
+                }
+            },
                     header: { Text(viewStore.header) },
                     footer: { Text(viewStore.footer) })
         }
