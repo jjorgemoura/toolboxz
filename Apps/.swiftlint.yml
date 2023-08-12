@@ -201,6 +201,11 @@ identifier_name:
     - ID
     - id
 
+nesting:
+  type_level:
+    warning: 2
+    error: 3
+
 type_name:
   excluded:
     - T
