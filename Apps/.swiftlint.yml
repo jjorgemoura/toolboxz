@@ -42,7 +42,6 @@ opt_in_rules:
  - yoda_condition
 
 # idiomatic
- - anonymous_argument_in_multiline_closure
  - convenience_type
  - discouraged_assert
  - discouraged_none_name
@@ -125,7 +124,6 @@ opt_in_rules:
  - sorted_enum_cases
  - sorted_imports
  - superfluous_else
- - switch_case_on_newline
  - trailing_closure
  - unneeded_parentheses_in_closure_argument
  - vertical_parameter_alignment_on_call
@@ -134,6 +132,7 @@ opt_in_rules:
 
 
 # opt-in rules that I want to keep disabled
+# - anonymous_argument_in_multiline_closure
 # - conditional_returns_on_newline
 # - custom_rules
 # - explicit_acl
@@ -147,13 +146,9 @@ opt_in_rules:
 # - missing_docs
 # - no_grouping_extension
 # - required_deinit
+# - switch_case_on_newline
 # - type_contents_order
 # - vertical_whitespace_between_cases
-
-
-# - prefixed_toplevel_constant
-# - switch_case_on_newline
-# - vertical_whitespace_opening_braces
 
 
 # disable rules that are enabled by default

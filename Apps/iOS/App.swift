@@ -6,11 +6,16 @@ import Tagged
 @main
 struct toolboxzApp: App {
 
+    let store = Store(
+        initialState: Settings.State(settingsData: SettingsData.sampleSettings),
+        reducer: { Settings() }
+    )
+
     var body: some Scene {
         WindowGroup {
-            SettingsView(store: Store(initialState: Settings.State.sampleSettings, reducer: {
-                Settings()
-            }))
+            NavigationView {
+                SettingsView(store: store)
+            }
         }
     }
 }

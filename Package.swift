@@ -43,10 +43,10 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.1.0"),
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.3.0"),
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
         .package(url: "https://github.com/pointfreeco/swift-tagged", from: "0.10.0"),
-        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.0.0")
+        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.0.2")
     ],
 
     targets: [
@@ -134,3 +134,9 @@ let package = Package(
         )
     ]
 )
+
+//for target in package.targets {
+//    var settings = target.swiftSettings ?? []
+//    settings.append(.enableExperimentalFeature("StrictConcurrency"))
+//    target.swiftSettings = settings
+//}

@@ -1,4 +1,4 @@
-// import ComposableArchitecture
+import Dependencies
 import Foundation
 
 /// This API allow us to read and write data to/from `UserDefaults`.
@@ -18,13 +18,22 @@ import Foundation
 ///
 /// All write methods are asynchronous, meaning, all of then return an effect, of type: `Effect`.
 public struct Gavetaz {
-    public var boolWithKey: (String) -> Bool
-    public var dataWithKey: (String) -> Data?
-    public var doubleWithKey: (String) -> Double
-    public var integerWithKey: (String) -> Int
-//    public var remove: (String) -> Effect<Never, Never>
-//    public var persistBool: (Bool, String) -> Effect<Never, Never>
-//    public var persistData: (Data?, String) -> Effect<Never, Never>
-//    public var persistDouble: (Double, String) -> Effect<Never, Never>
-//    public var persistInteger: (Int, String) -> Effect<Never, Never>
+    public var boolWithKey: @Sendable (String) -> Bool
+    public var dataWithKey: @Sendable (String) -> Data?
+    public var doubleWithKey: @Sendable (String) -> Double
+    public var integerWithKey: @Sendable (String) -> Int
+    public var remove: @Sendable (String) async -> Void
+    public var persistBool: @Sendable (Bool, String) async -> Void
+    public var persistData: @Sendable (Data?, String) async -> Void
+    public var persistDouble: @Sendable (Double, String) async -> Void
+    public var persistInteger: @Sendable (Int, String) async -> Void
+}
+
+//public typealias GavetazKey = String
+
+extension DependencyValues {
+    public var userDefaults: Gavetaz {
+        get { self[Gavetaz.self] }
+        set { self[Gavetaz.self] = newValue }
+    }
 }
